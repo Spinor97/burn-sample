@@ -4,6 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+arrow = "59.3.0"
 burn = { version = "0.21.0", features = ["dataset", "ndarray", "train"] }
-memmap2 = "0.9.11"
+parquet = { version = "59.3.0", features = ["arrow", "encryption"] }
+polars = { version = "0.55.2", features = ["parquet", "lazy", "streaming", "performant"] }
 serde = { version = "1.0.229", features = ["derive"] }
