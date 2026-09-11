@@ -7,6 +7,7 @@ use polars::lazy::{dsl::len, frame::{LazyFrame, ScanArgsParquet}};
 
 use crate::utils::sink_to_local;
 
+#[derive(Clone, Debug)]
 pub struct ParquetItem {
     pub feature: Vec<f32>,
     pub label: f32,
